@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title> Eleanor Pence: 6.943 Projects </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Lato" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class='header'>
+<div class="section bg--blue"> 
+    <div class="image--self"></div>
+    <div class="title-box section--centered">
+    <div class="title"><h1>i touched a breadboard once.</h1></div>
+    <div class="snark">adventures of a software engineer in the land of physical objects</div>
+    </div>
+</div>
+ <div class="navbar section--centered">
+    <a class="nav" href="index.html"> home </a>
+    <a class="nav" href="one.html">one</a>
+    <a class="nav" href="two.html">two </a>
+    <a class="nav" href="three.html">three</a>
+    <a class="nav" href="four.html">four</a>
+    <a class="nav" href="five.html">five </a>
+    <a class="nav" href="six.html">six</a>
+    <a class="nav" href="seven.html">seven</a>
+    <a class="nav" href="eight.html">eight</a>
+    <a class="nav" href="nine.html">nine</a>
+    <a class="nav" href="ten.html">ten</a>
+    <a class="nav" href="eleven.html">eleven</a>
+    <a class="nav" href="twelve.html">twelve</a>
+    <a class="nav me" href="thirteen.html">thirteen</a>
+    <a class="nav" href="fourteen.html">fourteen</a>
+    <a class="nav" href="fifteen.html">fifteen</a>
+</div>
+
+<div class="body">
+   
+<div class="content"> 
+<h1> Week 13: Networking </h1>
+<h2> Modularity: For When You Haven't Decided Exactly How Your Final Project Will Work </h2>
+<p>
+This week, I continued work on components of my final project. My project doesn't really include a lot of networking, but as soon as Prof. Gershenfield mentioned that this week was useful if you were trying to make your project modular, and I realized this would be very useful. I had been thinking about the signal processing components of my board: specifically, I had been thinking about doing beat detection in hardware instead of in software, using a low-pass filter to pull out the low-frequency sound of drum beats, but I wasn't entirely sure how to do that and I wanted to get the part of my project in which sound is taken in from an audio jack and output by a speaker, out of the way. "Spiral development!" declared Prof. Gershenfield's (somewhat) booming voice in my head. </p>
+<p> However, making my project modular, at least for now, would let me think about these things separately. Therefore, I created one board that had just the audio jack on it, and another board that had the speaker on it, and used a bus setup to connect them together.  The audio jack, the idea was, would have a male-to-male patch cord plugged in, with the other end connected to my iPhone.</p>
+<div class='img-holder'> <img src="img/week_13/jack.JPG">
+<div class='caption'>Figure 1: The audio jack board. Details on the audio jack board are on my final project documentation page,but the jist of it was that I could only find a female audio jack with vertical pins, so I bent them at a 90 degree angle. You can see this in the photo.</div></div> 
+<p> So I changed my speaker board slightly to incorporate the appropriate networking headers - there are now four, count 'em, <i>four</i> headers on this board, it's getting ridiculous. Then I plugged my speaker board into the FTDI cable, plugged the patch cord into my iPhone, and...two soft clicking sounds, and the smell of melted plastic. </p>
+<div class='img-holder'> <img src="img/week_13/melted.JPG">
+<div class='caption'>Figure 2: This class might as well be titled "How To Melt (Almost) Anything". Well, it could be for me; I've melted an exciting variety of things in the past few weeks. Notice the coil is misaligned from the magnet, and that there is a hole in the plastic, which is bubbled at the lower edge.</div></div> 
+<p> What had happened was, the speaker was much too low impedance compared to the typical set of speakers or headphones, and so too much current was passing through, causing the wire to melt and pop off of the magnet, making the speaker not useful as a speaker anymore. I attached a 10 Ohm resistor between a (new) speaker and the wires going to the speaker board, and tried again.  And then there was the sweet sound of success.  </p>
+<div class='img-holder'> <img src="img/week_13/transmitting.JPG">
+<div class='caption'>Figure 3: There was also the sweet light of an LED blinking to indicate transmission, but that had been there before. </div></div> 
+<p> Actually, the sweet sound of success was not very sweet. It was 1) very quiet, to the point where I don't have a video because the song coming out of the speakers was too quiet to record, and 2) very staticky. "Quiet" was likely caused by too high of a resistance between the speaker and the board, implying I'll have to experiment with resistor sizes during the final project (or get a higher-impedance speaker).  The statickiness might be potentially explained by the slightly terrible way I'd attached the resistor - in my haste to try a resistor with the speaker, I created a lot of open wire between the resistor and the speaker, and between the wire attaching the speaker to the board and the resistor, where there could potentially be interference. </p>
+<div class='img-holder'> <img src="img/week_13/janky.JPG">
+<div class='caption'>Figure 4: Eew. </div></div> 
+<p> The final, and most likely explanation, is that the speaker component was just really bad to start. In the coming week, I'll be trying all three of these potential solutions. </p>
+
+</div>
+
+</div>
+</body>
+
+</html>

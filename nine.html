@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title> Eleanor Pence: 6.943 Projects </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Lato" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class='header'>
+<div class="section bg--blue"> 
+    <div class="image--self"></div>
+    <div class="title-box section--centered">
+    <div class="title"><h1>i touched a breadboard once.</h1></div>
+    <div class="snark">adventures of a software engineer in the land of physical objects</div>
+    </div>
+</div>
+ <div class="navbar section--centered">
+    <a class="nav" href="index.html"> home </a>
+    <a class="nav" href="one.html">one</a>
+    <a class="nav" href="two.html">two </a>
+    <a class="nav" href="three.html">three</a>
+    <a class="nav" href="four.html">four</a>
+    <a class="nav" href="five.html">five </a>
+    <a class="nav" href="six.html">six</a>
+    <a class="nav" href="seven.html">seven</a>
+    <a class="nav" href="eight.html">eight</a>
+    <a class="nav me" href="nine.html">nine</a>
+    <a class="nav" href="ten.html">ten</a>
+    <a class="nav" href="eleven.html">eleven</a>
+    <a class="nav" href="twelve.html">twelve</a>
+    <a class="nav" href="thirteen.html">thirteen</a>
+    <a class="nav" href="fourteen.html">fourteen</a>
+    <a class="nav" href="fifteen.html">fifteen</a>
+</div>
+
+<div class="body">
+   
+<div class="content"> 
+<h1> Week 9: Output Devices</h1>
+<p> This week, I worked on making the speaker component for my final project. To recap, my final project is a speaker that also responds to the music it's playing through different colors of light. So obviously, having a speaker that works is quite important. </p>
+<div class='img-holder'> <img src="img/week_9/traces.png"> <img src="img/week_9/board.jpg"/>
+<div class='caption'>Figure 1: Left: My board. Right: My board, but existing, in real, physical space.</div></div>
+<p> A few notes on connecting things, since it's not well-documented on the class site. There are two four-pin headers on the original board that Prof. Gershenfield documented on the class site (I really want to refer to all of those boards as Gershenboards, but I am restraining myself).  However, it's not clear how you're supposed to connect the speaker to the 4pin header, or what exactly is supposed to be attached to power.  I connected the speaker by soldering the male end of two of the tiny jumper cables (not sure what they're called) to each of the contacts on the speaker, and connecting the other end to the pins leading to the drain on the N-MOSFET and to the power pin on the FTDI header. My initial solution to the problem of "uh, where is the power supposed to be coming from" was to plug in two of the jumper cables to the first (i.e. the ground one with a black wire) and third (5V, red wire) socket of a 5V FTDI cable, and the other end of each to the power and ground pins of the header on the board. This will yield a functional board, but only if you're lucky. Something about the combination of trying to pass 5V into the 5V regulator causes problems with the performance of the board, including the absolutely charming effect of the solder attaching the regulator to the board liquefying. </p>
+<div class='img-holder'> <img src="img/week_9/sad_trombone.JPG">
+<div class='caption'>Figure 2: *sad trombone noises* </div></div>
+<p> It was suggested to me that if I was going to be using FTDI for sure, I should remove the regulator and solder the in and out pads of the regulator together. This works better; I have not fried any components yet.</p>
+<div class='img-holder'> <img src="img/week_9/beep.MP4">
+<div class='caption'>Figure 3: I assume if we give it a non-hideous waveform, it won't sound so terrible. I guess I'll find out! </div></div>
+
+</div>
+
+
+</div>
+</body>
+
+</html>

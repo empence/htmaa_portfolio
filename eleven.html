@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title> Eleanor Pence: 6.943 Projects </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Lato" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class='header'>
+<div class="section bg--blue"> 
+    <div class="image--self"></div>
+    <div class="title-box section--centered">
+    <div class="title"><h1>i touched a breadboard once.</h1></div>
+    <div class="snark">adventures of a software engineer in the land of physical objects</div>
+    </div>
+</div>
+ <div class="navbar section--centered">
+    <a class="nav" href="index.html"> home </a>
+    <a class="nav" href="one.html">one</a>
+    <a class="nav" href="two.html">two </a>
+    <a class="nav" href="three.html">three</a>
+    <a class="nav" href="four.html">four</a>
+    <a class="nav" href="five.html">five </a>
+    <a class="nav" href="six.html">six</a>
+    <a class="nav" href="seven.html">seven</a>
+    <a class="nav" href="eight.html">eight</a>
+    <a class="nav" href="nine.html">nine</a>
+    <a class="nav" href="ten.html">ten</a>
+    <a class="nav me" href="eleven.html">eleven</a>
+    <a class="nav" href="twelve.html">twelve</a>
+    <a class="nav" href="thirteen.html">thirteen</a>
+    <a class="nav" href="fourteen.html">fourteen</a>
+    <a class="nav" href="fifteen.html">fifteen</a>
+</div>
+
+<div class="body">
+   
+<div class="content"> 
+<h1> Week 11: Microphone Board </h1>
+<p> In line with last week's project, in which I worked on the output portions of my final project, this week I plan to work on the coding and signal processing portion of my final project. Since in order to perform signal processing, you need a signal to process, I needed some way to get music into my board, and I needed to incorporate a sensor somehow. Under these two criteria, I decided to produce a microphone board that would perform FFT on the input, and then output a visual representation of the extracted pitch or beat information via an LED. </p>
+<p> I began with Prof. Gershenfield's microphone board. While reproducing it in EAGLE and adding an LED, the main problem I encountered was that there was an unlabeled "IC2 3.3V". I thought that this was a MOSFET since it had similar packaging, but if it was a MOSFET, many aspects of the labeling didn't make sense, including the 3.3V and the fact that its terminals were "out", "in" and "gnd", and not anything more MOSFET-y. 
+</p>
+
+<div class='img-holder'> <img src="img/week_11/gershenboard.png"/>
+<div class='caption'>Figure 1: The Gershenfield microphone board. Mystery component is IC2 3.3V. Spoiler alert: it's not a MOSFET. </div></div> 
+
+<p>
+    PSA: IC2 is not a MOSFET. It's a voltage regulator. Fabrication went well after I figured that out. The microphone was the most difficult part, honestly: because its terminals were completely flush against the underneath side of the package, reflow soldering was required to attach it. Unfortunately, I had an exam during the reflow soldering recitation, so I had to ask Gavin how to reflow solder things. The answer is that reflow soldering is just 1) placing solder paste on all of the contacts 2) placing your component on the solder and 3) while pressing down, using a hot air gun to melt the solder paste and thus solder the part. 
+</p>
+<div class='img-holder'> <img src="img/week_11/milled.jpg"><img src="img/week_11/done.jpg">
+<div class='caption'>Figure 2: Fabricating the microphone board, feat. the board while being milled and the completed board with soldered components. </div></div> 
+
+<div class='img-holder'> <img src="img/week_11/avr.jpg">
+<div class='caption'>Figure 3: You have no idea how pleased I am to discover that I can fabricate a full board that then actually programs. </div></div> 
+
+<p>
+    Unfortunately, all was not well. When I plugged in the board, I got this. It's not a flatline all the time, there are some random jitters, but they don't line up with background noise. 
+</p>
+<div class='img-holder'> <img src="img/week_11/sad.jpg">
+<div class='caption'>Figure 4: *sad trombone noises* </div></div> 
+
+<p> The multimeter shows that there is nothing coming out of the microphone's output, which implies there's something installed wrong. Unfortunately, the parallel remover tool was broken, so I used the hot air gun instead to remove the microphone. I then removed the old solder with copper braid, and re-did the reflow soldering. This time it worked! </p>
+
+<div class='img-holder'> <img src="img/week_11/talking.JPG">
+<div class='caption'>Figure 4: Now when I talk into the microphone, it does this. </div></div> 
+
+<p> Unfortunately, the quality on the audio does not appear to be nice enough to perform useful analysis on the signal, so I'll be working on getting a working auxiliary jack that can take sound directly from an iPhone before I can start on the realtime signal analysis portion of my final project. </p>
+</div>
+
+</div>
+</body>
+
+</html>

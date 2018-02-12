@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title> Eleanor Pence: 6.943 Projects </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Lato" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class='header'>
+<div class="section bg--blue"> 
+    <div class="image--self"></div>
+    <div class="title-box section--centered">
+    <div class="title"><h1>i touched a breadboard once.</h1></div>
+    <div class="snark">adventures of a software engineer in the land of physical objects</div>
+    </div>
+</div>
+ <div class="navbar section--centered">
+    <a class="nav" href="index.html"> home </a>
+    <a class="nav" href="one.html">one</a>
+    <a class="nav me" href="two.html">two </a>
+    <a class="nav" href="three.html">three</a>
+    <a class="nav" href="four.html">four</a>
+    <a class="nav" href="five.html">five </a>
+    <a class="nav" href="six.html">six</a>
+    <a class="nav" href="seven.html">seven</a>
+    <a class="nav" href="eight.html">eight</a>
+    <a class="nav" href="nine.html">nine</a>
+    <a class="nav" href="ten.html">ten</a>
+    <a class="nav" href="eleven.html">eleven</a>
+    <a class="nav" href="twelve.html">twelve</a>
+    <a class="nav" href="thirteen.html">thirteen</a>
+    <a class="nav" href="fourteen.html">fourteen</a>
+    <a class="nav" href="fifteen.html">fifteen</a>
+
+</div>
+
+<div class="body">
+   
+<div class="content"> 
+<h1 class="section--centered"> Week Two: Computer-Controlled Cutting </h1>
+<p>This week there were two techniques we learned: project management and computer-controlled cutting. The computer-controlled cutting module was divided into two parts: using the laser cutter, and using the vinyl cutter. </p>
+<h2 class="section--centered"> Homeomorphic endofunctors mapping submanifolds of a Hilbert space</h2>
+<p>
+The 'project management section was not very difficult for me, since 6-3 has a fair amount of courses that use Git - the most fiddly part, getting the SSL keys set up, went off without a hitch. I must say, I am very glad that I'm not having to learn git during this class, because git - despite being powerful, rather elegant in design, and utterly ubiquitous - infamously has a stupid user interface. (The way it was explained to me was that git as we know it was originally intended by Linus Torvalds to be the "plumbing" for a more user-friendly distributed version control system, but then people started using it and he never got a chance to put in the "porcelain" over the top that would make git user-friendly, so the bizarre UI remained. I tell this story because it is probably my favorite instance of the concept of "technical debt".) <a href="https://try.github.io/levels/1/challenges/1">This </a>interactive git tutorial was helpful for me at first. You might find it helpful too, if you're new to git and people keep telling you things like <a href="https://twitter.com/tabqwerty/status/45611899953491968?lang=en">oh yeah! git gets easier once you get that branches are homeomorphic endofunctors mapping submanifolds of a Hilbert space!"</a> and all you want to do is un-commit something, dang it. </p>
+<h2 class="section--centered"> Vinyl cutting: Everyone gets a laptop sticker! </h2>
+<p>
+After our TA told us that it was likely that everyone would forget about the vinyl cutter assignment and then there would be a huge rush for the vinyl cutter Tuesday evening, I decided to do my vinyl cutting first. I didn't have any good ideas at first on what to cut on the vinyl cutter for last week; I already have a laptop sticker, which takes up my entire laptop. So I surveyed my mom and a couple of my friends for ideas for laptop stickers that <i>they</i> wanted, saying I would make them on a first come-first serve basis. My mother, a biology teacher, wanted a theobromine molecule for her classroom (theobromine being the "active ingredient" in chocolate.) </p>
+<div class='img-holder'> <img src='img/week_2/theobromine.png'/>
+<div class='caption'>Figure 1: Theobromine.</div></div>
+<p>My friend Maura, whose GRT once reportedly told her that "tea is, like, your life" wanted a cute tea-related sticker. </p>
+<div class="img-holder"><img src='img/week_2/tea.png'><div class="caption">Figure 2: Maura's tea sticker.</div></div>
+<p>My main issue with doing this was difficulties with resolution. Very high-resolution images are best, and large images will do in a pinch, but in that case the image needs to be properly scaled down as well, else you'll just get a really big sticker. My first draft of the theobromine was definitely not from a high-enough resolution image, as you can see in the following image: </p>
+<div class="img-holder"><img src='img/week_2/theobromine_peeled2.jpg'><div class="caption">Figure 3: Low-resolution version of the theobromine sticker, partially peeled from backing. Note the jagged edges on the Ns, and the blockiness of the three in the top right.</div></div>
+<p> I then upsampled the image in a Photoshop document the same size as the original image, but with a resolution of 300ppi, cleaning up the edges manually with the color select and paintbucket tools, then fed it into the laser cutter. I realized about five seconds after the vinyl cutter started cutting that the image was too big -  it turns out that mods also needs to know what the desired DPI is, and dpi determines the image size. mods knows what the dpi is because it's in the image metadata, and if you did not set the dpi of the image in your image editing program, because you're a digital artist who doesn't print things, then it will use whatever your image editor's default dpi was - in this case, 72dpi.  And that's what caused the image to be way too big.</p>
+<div class="img-holder"><img src='img/week_2/resolution_72.png'><img src='img/week_2/resolution_200.png'><div class='caption'>Figure 4: The image-uploading section of mods. Same image, same number of pixels, but different DPI and thus different size coming out of the vinyl cutter. </div></div>
+<p>Next, I worked on Maura's sticker. The original image was 1) low-resolution and 2) in color. I copy-pasted the image into a higher ppi Photoshop document, then turned the image into black and white, by using the color select tool on the colored regions and then making them black. Some parts of the image that had a color-to-black border, which meant that in black and white those sections would just merge together, so I added a gap between them so they'd be read as two different blocks of color. Then I printed it!</p>
+<div class="img-holder"><img src='img/week_2/tea_4.png'><img src='img/week_2/tea_printed.jpg'><div class='caption'>Figure 6: Tea sticker, made black and white. Note the white border between the outline of the teabag and the internal shading. Also, the final version of the tea sticker.</div></div>
+
+<h2 class="section--centered"> Laser Cutting: modern art</h2>
+<p>
+I started out by measuring the kerf and figuring out the needed slot size at the same time, by creating a test comb. I had chosen the program Fusion360 earlier, and I decided that I should use it again here, even though a non-parametric program like Rhino or a drawing program like Inkscape would also work, because I wanted to become more comfortable with CAD-like programs. Plus, I planned to <i>use</i> the parametric capabilities, and the entire patching-over-Rhino's-issues-with-Grasshopper thing seemed a little silly when I had a program that could do that sort of thing natively. In creating this drawing, I learned how to use sketch constraints while doing this drawing. </p>
+<p> The setup of the test comb was a series of slots with campfers along a long piece of cardboard, slowly increasing in width as you went along the comb. The idea was that I could measure the size of the slots and compare it to the slot width on the drawing to determine the kerf, and that I could also try various widths of slot to see what held more securely. Sizes ranged from 0.18in to 0.12 in. </p>
+<div class="img-holder"><img src='img/week_2/constraints.png'><div class="caption">Figure 7: Constraints! So many constraints.</div></div>
+<p>After using the laser cutter to actually cut out my design, I discovered that 0.12in on the drawing gave a tight fit as slot width. .015in was the kerf that I got.</p>
+<div class="img-holder"><img src='img/week_2/fit.jpg'><div class="caption">Figure 9: It fits!</div></div>
+<p>Emboldened by my success, I moved on to the press-fit construction kit. Unfortunately, I did not appear to get the memo about being allowed to build a moving hand or a gyroscope out of cardboard, so I simply replicated the pieces in the example (gik.cad, on the course website) in Fusion360, as an exercise in making CAD sketches. </p>
+<div class="img-holder"><img src='img/week_2/gik.png'><div class="caption">Figure 10: My versions of the pieces in gik.cad.</div></div>
+<p>
+My main issue in trying to reproduce these was rotating the "slots with campfer" modules I had already created for the test comb, so that they would line up with the different edges of the pieces, particularly the circular and triangular ones, and ensuring that the location of the slots on each side was the same. After a fair amount of time spent trying to figure out how to do this by hand, I discovered the existence of the Circular Pattern tool, and all was solved! The Circular Pattern tool is located under Sketch>Circular Pattern, and allows you to specify a point around which the selected part of the drawing will be copied in a circular pattern, and how many copies to make. </p>
+<div class="img-holder"><img src='img/week_2/circular.png'><div class="caption">Figure 11: See the weird-looking, vaguely circular icon with the holes? It indicates that a circular pattern constraint is in place.</div></div>
+<p> Having discovered this while making the circular and triangular pieces, I then applied it to the rectangular pieces, and it was certainly helpful, since copy-pasting things in Fusion360 tends to somehow lead to duplicate lines aside from the ones you deliberately copy-pasted, lines which are not visible because they precisely overlap with the old lines, but make themselves known any time you try to move the figure you copied, and lines which the laser cutter can see and sometimes tries to cut along. I then discovered there was a similar rectangular pattern tool, which replicates a particular shape along a particular line, which I used to make a new, more comprehensive test comb with more slots. 
+</p>
+
+<p>The laser-cutting itself was uneventful. </p>
+<div class="img-holder"><img src='img/week_2/action_shot2.jpg'><div class='caption'>Figure 12: Action shot! (To be honest, I just thought it was neat to see the laser at work.) </div></div>
+<p>You could make a tiny turbine.</p>
+<div class="img-holder"><img src='img/week_2/tiny_waterwheel.jpg'><div class='caption'>Figure 13: smol turbine</div></div>
+<p>Or modern art! </p>
+<div class="img-holder"><img src='img/week_2/modern_art2.jpg'><div class='caption'>Figure 14: modern art</div></div>
+
+
+
+</div>
+</body>
+
+</html>

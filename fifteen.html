@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title> Eleanor Pence: 6.943 Projects </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Lato" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class='header'>
+<div class="section bg--blue"> 
+    <div class="image--self"></div>
+    <div class="title-box section--centered">
+    <div class="title"><h1>i touched a breadboard once.</h1></div>
+    <div class="snark">adventures of a software engineer in the land of physical objects</div>
+    </div>
+</div>
+ <div class="navbar section--centered">
+    <a class="nav" href="index.html"> home </a>
+    <a class="nav" href="one.html">one</a>
+    <a class="nav" href="two.html">two </a>
+    <a class="nav" href="three.html">three</a>
+    <a class="nav" href="four.html">four</a>
+    <a class="nav" href="five.html">five </a>
+    <a class="nav" href="six.html">six</a>
+    <a class="nav" href="seven.html">seven</a>
+    <a class="nav" href="eight.html">eight</a>
+    <a class="nav" href="nine.html">nine</a>
+    <a class="nav" href="ten.html">ten</a>
+    <a class="nav" href="eleven.html">eleven</a>
+    <a class="nav" href="twelve.html">twelve</a>
+    <a class="nav" href="thirteen.html">thirteen</a>
+    <a class="nav" href="fourteen.html">fourteen</a>
+    <a class="nav me" href="fifteen.html">fifteen</a>
+</div>
+
+<div class="body">
+   
+<div class="content"> 
+<h1> Final Project: Soundlight</h1>
+
+
+
+<p> My final project is a speaker that interacts with the music that it plays in realtime through light and color. </p>
+
+<div class='img-holder'> 
+
+    <div style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/_dZuvN2dBVw?ecver=2" width="480" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div> 
+
+</div>
+<div class='img-holder'>
+    <div style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/3dFZw6ezWbM?ecver=2" width="480" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+</div>
+
+<div class='img-holder'>
+
+<div style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/E4P9vJiZB6o?ecver=2" width="480" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
+</div>
+
+<div class='img-holder'>
+
+
+<div style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/j99HFHT-dUk?ecver=2" width="480" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+
+</div>
+
+<p> 
+It takes input through a standard 3.5mm audio jack - I connect it to my iPhone and my MacBook Pro, though of course any other audio source would work just as well. It runs on 9V DC.  
+
+The intended aesthetic is "futuristic phonograph".  
+
+The base is a press-fit box, laser-cut from a sheet of black acrylic; the cone is 3d printed. The lights are a specially-ordered string of RGB LEDs, glued to a ring of clear acrylic which is in turn attached to the inside of the front plane of the speaker, and a second string of RGB LEDs glued to a thin stick of acrylic which is suspended through the center of the cone. This is so both the body of the cone and the front of the speaker will light up in synchrony.  The signal processing that enables the sound-light interaction takes place on a printed circuit board containing Atmel ATtiny44 microcontroller which is hidden away in the base; there is also an amplifier board in the base that drives the speaker, since the voltage output by most devices through a 3.5mm jack is quite small. </p>
+</p> 
+<h2> The cone </h2>
+<p> The very first thing I decided about the speaker, before I'd decided on the music-light interaction, was that the speaker should be translucent and internally lit with LEDs, for a soft-glow effect. I was originally interested in very organic shapes, including a nautilus shell.  Unfortunately, it turns out that it is incredibly difficult to build a nautilus shell in a CAD program. (Also, the mixing of visual metaphors seemed quite unnecessary. Nautiluses don't typically glow in nature, and they have little-to-nothing to do with sound.)
+</p>
+<div class='img-holder'> <img src="img/week_15/speakers_2.png">
+<div class='caption'>Figure 1: My early sketches for this project.  </div></div> 
+<p> Instead, I started looking at the shapes of speakers other people had designed, for inspiration, and that was how I settled on the look of a phonograph bell. The nice thing about phonograph bells, comparatively, is that they're regular objects. Most vintage phonographs have regularly spaced creases, but I didn't like how that looked as much. The creases were also suboptimal for my project specifically, since I wanted to project light through the bell of the speaker - the creases would be thicker and wouldn't let through the light. My final speaker bell ended up being both simpler and even more organic in form than the standard vintage phonographs. It's actually fairly simple to create curved, soft forms in Fusion360 as long as said forms are radially symmetric: just create a sketch of the silhouette of your shape, and rotate that around a central axis.  </p>
+<div class='img-holder'> <img src="img/week_15/bell_cad.png"> <img src="img/week_15/bell_sketch.png">
+<div class='caption'>Figure 2: The speaker bell, in CAD. It's a solid of revolution! See, I thought I'd never use high school geometry again, but I was wrong. </div></div> 
+<p> I fabricated the speaker bell with 3d printing, using the OnePrint in the EECS lab with an off-white material that becomes translucent when it's spread out thin. I wasn't pleased with how yellow it turned out, actually, but I figured the effect would be somewhat softened by the glow of the LEDs inside.  </p>
+<div class='img-holder'> <img src="img/week_15/bell.JPG"> <img src="img/week_15/off-white.JPG">
+<div class='caption'>Figure 3: Fresh out of the printer, with support material still attached, and with no support material, against a pure white material (acrylic sheeting).  Unfortunately, the only whiter material the EECS lab has - ABS - does not come with dissolvable support material, and thus can't be used to make hollow shapes. ABS is also not translucent at all. </div></div> 
+<p> When I fabricated the cone, I initially imagined that the cone would contain a large board with both microcontroller and lights, and that the power jack and the auxiliary sound jack would just trail out the back. So I fabricated the cone to be open - i.e. with no front - because I needed to be able to take the board out, reprogram it, and put it back in for the forseeable future. I also didn't know what the front would even look like, because I didn't know what my speaker would look like yet. </p>
+<h2> The speaker </h2>
+<p> In weeks eleven and thirteen, I had already been working on the problem of having a speaker produce sound from aux input. The main problem was volume: even after extensive troubleshooting, the sound, while of serviceable quality, was really, really quiet.  </p>
+<p>  Part of the problem was that the lab-provided speakers just weren't good enough quality. They're fine for our purposes, but they don't really project enough. But even with a better quality one, the situation did not improve. Why? Because the iPhone produces a signal appropriate for transduction by headphone speakers, which are very small and don't need to produce a lot of volume because they're located directly in your ears. What I needed, and what I had totally failed to consider in the planning phase, was an amplifier. </p>
+<p> This completely predictable failure has been brought to you by the fact that I have never done any kind of power electronics before.  I had just assumed that as long as the signal was intact, the speaker would be able to transduce it at a high enough volume as long as the speaker was good enough quality. Which is a very computer-science-y mistake to make, really: only paying attention to the information being transmitted, and assuming the physical medium could just do whatever you needed it to do. In any case, with the final presentation only a week away, I despaired of having the right parts to make an amplifier board: all the designs I'd seen included a specialized chip for the amplification proper, which we did not have in the lab. So: I cannibalized an existing speaker.  </p>
+<div class='img-holder'> <img src="img/week_15/cannibalized.jpg">
+<div class='caption'>Figure 5: To be clear: I did not just rip apart a random speaker I found laying around the lab! Gavin gave me permission to take it apart and steal its amplifier board. </div></div> 
+<p> Once I removed the board and hooked it up to the speaker and the speaker up to my iPhone, the situation improved immensely. </p>
+<div class='img-holder'> <div style="position:relative;height:0;padding-bottom:75.0%"><iframe src="https://www.youtube.com/embed/KxMK5mSy3to?ecver=2" width="480" height="360" frameborder="0" allow="autoplay; encrypted-media" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+<div class='caption'>Figure 6: Feat. Taylor Swift. This is because deep down, past all the nerd, I am just a basic white girl. *Sips pumpkin spice latte* </div></div> 
+<p> However, the amplifier board was rather large - about six inches long and up to an inch thick, due to protruding potentiometers. I had previously intended my cone to rest on a purely ornamental base that would be about 3 inches square.  However, now that I had a large amplifier board to hide, I needed a more substantial base.  </p>
+<h2> The base </h2>
+<p> It was at this point that I realized that actually, having a large base would not disrupt the aesthetic of the speaker: all the old phonographs have quite large, lacquered wood bases, and having the bell of the speaker protrude at an angle from the base would make it resemble an old phonograph quite readily.  So I needed a box, with a brace extending out of it to hold the speaker bell up at the right sort of angle. I considered 3d printing the box, just so everything would match, but that would take a very long time. Instead, I laser cut a press-fit box from black acrylics, adding a brace out of the same material. This has the additional advantage of making the printed speaker look less yellowy by contrast. 
+<div class='img-holder'> <img src="img/week_15/rest_front.jpg"><img src="img/week_15/rest_side.jpg">
+<div class='caption'>Figure 7: The speaker, with a base. </div></div> 
+<h2> The lights </h2>
+<p> I originally intended that the speaker would be lit by a board full of LEDs placed on the inside of the speaker - that the light would diffuse out pretty evenly across the inner walls of the speaker. However, the speaker wasn't quite as translucent as I'd hoped, and so something more drastic was needed. </p>
+<div class='img-holder'> <img src="img/week_15/insufficient.JPG">
+<div class='caption'>Figure 8: Clearly insufficiently glowy. </div></div> 
+<p> Instead of adding more LEDs, I went online and purchased two strings of RGB LEDs, preconnected with copper traces on a flexible plastic base, and with resistors already placed.  This would allow me to have a large number of lights without having to fabricate a large board and solder the parts on.  The strings of RGB LEDs take four inputs: three for the red, green, and blue LEDs, and one power line. </p>
+    <div class='img-holder'> <img src="img/week_15/action_purple.jpg"><img src="img/week_15/action_side_cyan.jpg"> <div class='caption'>Figure 9: The lights in place.  
+    </div></div> 
+<p> The microprocessor board is fairly simple. It contains one Atmel ATtiny44 8-bit microprocessor, two four-pin headers - one that takes input from the aux and power jacks, and one that sends out power and signal to the three LED lines terminating inside the speaker cone.  The microprocessor takes in auditory input, runs it through an analog-to-digital converter, and does some signal processing to extract the salient features of the music and decides which colors should be lit up on that basis. </p>
+<h2> The signal processing </h2>
+<p> Here is my <a href="static/loud_rgb.c">code</a> and my <a href="static/loud_rgb.make">makefile</a>. I wish I could say that I used sophisticated algorithms to retrieve the most relevant important characteristics of the audio signal, but it turns out that that is totally unnecessary. The analog-digital converter outputs values in the range 0 to 1023, but in practice, even the quietest signals only use the range 750 - 1023. I split up the range into intervals of 50, and then assigned a section of the ROYGBIV spectrum to each: for example, values below 750 cause the speaker to produce no light, values from 750 to 800 produce red light, values from 800 to 850 produce yellow light, values from 850 to 900 produce green light, and values from 900 to 950 produce cyan light. In order to smooth out the color transitions and protect against the small amount of electrical noise that is added to the audio signal once it enters the board, the value that we're testing is actually not the value that comes out of the digital-analog conversion, but a time-decayed average of all the values that have ever come out of the digital-analog conversion. The algorithm discounts old values heavily, but the small amount of smoothing it adds is enough to make the lights less "jittery". </p>
+
+
+
+</div>
+
+</div>
+</body>
+
+</html>

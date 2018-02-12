@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title> Eleanor Pence: 6.943 Projects </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway|Lato" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class='header'>
+<div class="section bg--blue"> 
+    <div class="image--self"></div>
+    <div class="title-box section--centered">
+    <div class="title"><h1>i touched a breadboard once.</h1></div>
+    <div class="snark">adventures of a software engineer in the land of physical objects</div>
+    </div>
+</div>
+ <div class="navbar section--centered">
+    <a class="nav" href="index.html"> home </a>
+    <a class="nav" href="one.html">one</a>
+    <a class="nav" href="two.html">two </a>
+    <a class="nav me" href="three.html">three</a>
+    <a class="nav" href="four.html">four</a>
+    <a class="nav" href="five.html">five </a>
+    <a class="nav" href="six.html">six</a>
+    <a class="nav" href="seven.html">seven</a>
+    <a class="nav" href="eight.html">eight</a>
+    <a class="nav" href="nine.html">nine</a>
+    <a class="nav" href="ten.html">ten</a>
+    <a class="nav" href="eleven.html">eleven</a>
+    <a class="nav" href="twelve.html">twelve</a>
+    <a class="nav" href="thirteen.html">thirteen</a>
+    <a class="nav" href="fourteen.html">fourteen</a>
+    <a class="nav" href="fifteen.html">fifteen</a>
+</div>
+
+<div class="body">
+   
+<div class="content"> 
+<h1 class="section--centered"> Week Three: Electronics Production </h1>
+<p>Our assignment this week was to follow the directions <a href="http://fab.cba.mit.edu/classes/863.16/doc/projects/ftsmin/index.html">here</a> to produce a "programmer", which is a board that programs other boards. </p>
+<h2>Milling the PCB </h2>
+<p>Some notes about the mill first.  First goes the fixed bed, which is, as the name suggests, a part of the machine. Next there is a frame, and on top of that there is a sacrificial layer, and the board you're making is attached to that with double-sided stick-tape. The end-mill itself comes in 1/64" and 1/32" sizes; the former is used for for milling traces, and the latter is used for cutting outlines. The end-mill is held by a collet, which has a screw that is tightened by a very skinny screwdriver. The endmill is lowered onto the surface of the board, and cuts through the upper copper layer to mill out the traces. </p>
+<div class='img-holder'> <img src="img/week_3/shallow.JPG"/>
+<div class='caption'>Figure 1: Attempt #1. </div></div>
+<p>
+My first clue that something was that there was not nearly enough debris. The tip actually has to be pressed fairly hard against the surface of the copper in order to cut all the way through - which is, of course, the goal, since if there's copper left connecting the traces you cut to each other, the board turns into one big short. From one of the other students I picked up the technique of, before tightening the clamp, putting a pair of needle-nose pliers around the circular part of the bit, then pushing down on the handle of the pliers, forcing the bit lower. </p>
+<div class='img-holder'> <img src="img/week_3/push.JPG"/>
+<div class='caption'>Figure 2: Techniques for getting the bit to cut deep enough, part one. </div></div>
+<p>
+This didn’t actually fix the entire problem. </p>
+<div class='img-holder'> <img src="img/week_3/shallow_2.jpg"/>
+<div class='caption'>Figure 3: See how the left part of the board is cut down to white, whereas the right side is still shiny? The shiny part is copper; its continued existence on this board after two runs through the mill attests to the fact that the board is uneven and that the bit still was not deep enough.</div></div>
+<p> Because the board was uneven, a bit height that worked fine for the left side of the board was not low enough to cut all the way through the copper on the right side of the board. Further pushing was clearly necessary. The TA informed me that there was an additional technique I could use: the clamp, when tightened, actually pulls the bit up slightly, undoing all the pushing you did earlier. Therefore, tighten the clamp with the screwdriver and push down with the pliers at the same time, to avoid losing all your progress. </p>
+<div class='img-holder'> <img src="img/week_3/push2.JPG"/>
+<div class='caption'>Figure 4: Techniques for getting the bit to cut deep enough, part two. Taking this picture while turning the screwdriver <i>and</i> pushing down on the pliers was a feat, let me tell you. </div></div>
+<p> Note for future students: If that still isn't enough, apparently you can adjust bit height settings from the mod application. Specifically, adjust the origin z-value by a very small amount - ~50 microns, or .002 inches, in the units used by mods - once the bit is in place, forcing it deeper into the copper. </p>
+<div class='img-holder'> <img src="img/week_3/push3.JPG"/><img src="img/week_3/push4.JPG"/>
+<div class='caption'>Figure 5: Techniques for getting the bit to cut deep enough, part three. Left: before, right: after.  I didn't actually have to use this one, but here it is for the record. Small adjustments are (apparently) key! </div></div>
+<div class='img-holder'> <img src="img/week_3/debris.JPG"/>
+<div class='caption'>Figure 6: Cutting at the correct height now. So much debris! </div></div>
+<div class='img-holder'> <img src="img/week_3/final_traces.JPG"/><img src="img/week_3/done.JPG"/>
+<div class='caption'>Figure 7: This is what it's supposed to look like. See the pale color showing through all over? </div></div>
+<p>The last step for this part of the project is to remove the excess copper that might cause shorts, primarily across the front of the USB contacts.</p>
+<div class='img-holder'> <img src="img/week_3/scrape.JPG"/>
+<div class='caption'>Figure 8: I had originally imagined that "cutting traces" meant literally cutting across the traces with a razor, with the razor held perpendicular to the surface of the board, but no, it's more like "peeling up the traces" or "scraping up the traces", with the razor almost parallel to the board surface. This seems obvious in retrospect.</div></div>
+<h2> Adding Components </h2>
+<p>The next part of the instructions concerned soldering all the correct electrical components to the board. The main thing I was confused by when going through these instructions was how I was supposed to tell which resistors and which diodes went where. The diagram of the PCB was labeled with R1, R2, R3, but not with which resistor R1 actually was. </p>
+<div class='img-holder'> <img src="img/week_3/pcb.png"/>
+<div class='caption'>Figure 9: Do you see any component descriptions? Any "49 ohms"? Any "0.1F"? Me neither. </div></div>
+<p>It was at this point that the TA pointed out that the R1, R2 and R3 were mirrored on the circuit diagram, which was, in fact, very well-labeled indeed. </p>
+<div class='img-holder'> <img src="img/week_3/schematic.png"/>
+<div class='caption'>Figure 10: And then I felt silly. </div></div>
+<p>I then soldered. Only one note here, which is that you really do have to bulk up the USB contacts quite a bit in order to get a good connection once you've plugged this into the USB port. I went back twice and put more solder on, that's how important it is. </p>
+<div class='img-holder'> <img src="img/week_3/completed.JPG"/>
+<div class='caption'>Figure 11: Done! Not very pretty, but entirely functional. </div></div>
+<h2> Programming the ATtiny45</h2>
+<div class='img-holder'> <img src="img/week_3/program.JPG"/>
+<div class='caption'>Figure 11: Programming the programmer to program other boards. I wonder how many instances of the word 'program' I can fit in this caption. </div></div>
+<p>
+The ATtiny45 is the microcontroller that sits on this board. It needs to itself be programmed before it can be used to program other boards, and, in what seems vaguely like a circular dependency, you also need a programmer to program this board to program other boards. The only difficulty I had with this section of the project was that the instructions do not specify that the programmer needs to be plugged into the computer via USB as well as plugged into the ISP on the board. This is important, as the board isn't useable as a USB device until you program it. The last steps are to change this board from a programmee into a programmer: change the reset pin into a GPIO pin by running make rstdisbl, and then physically removing the solder bridge that previously connected the VCC and the Vprog pin. </p><p>
+That's all, folks! Tune in next week for 3D printing and scanning. </p>
+
+</div>
+
+</div>
+</body>
+
+</html>
