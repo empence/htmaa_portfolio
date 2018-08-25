@@ -29,12 +29,12 @@ img{
     color:white;
 }
 .bg--grey{
-    background-color:#ededed;
+    background-color:#17b2a5;
     color:white;
 
 }
 .bg--green{
-    background-color:#d7edaf;
+    background-color:#17b2a5;
 }
 .bg--teal{
     background-color:#90e5e0;
@@ -93,7 +93,7 @@ h1{
 
 }
     .nav:hover{
-        color:#90e5e0;
+        color:#17b2a5;
     }
 .snark{
     font-weight:bold;
@@ -122,7 +122,7 @@ h1{
 }
 
 .me{
-    color:#71CBE8;
+    color:#17b2a5;
     font-weight:bolder;
 }
 .img-holder{
